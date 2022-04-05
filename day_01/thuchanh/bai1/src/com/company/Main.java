@@ -4,6 +4,7 @@ public class Main {
     public int age;
     public static final double PI = 3.14;
     public static void main(String[] args) {
+
 //        System.out.println("hello, mọi ngừi");
 //
 //        int age;//khai báo biến

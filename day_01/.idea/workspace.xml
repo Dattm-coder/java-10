@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67dee714-ba45-4936-8d2b-a465cab71c75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/groovy_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/bai1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/out/production/bai1/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai1/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day_01/com/company/Main.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_03/bai1/src/com/company/SwitchCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/thuchanh" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

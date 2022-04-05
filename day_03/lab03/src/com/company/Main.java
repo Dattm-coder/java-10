@@ -14,6 +14,8 @@ public class Main {
 
         for (int i = 0; i < chuoi.length(); i++) {
             kyTu = chuoi.charAt(chuoi.length() - i - 1);
+            // kiểm tra ký tự tại vị trí i
+            // có giống với ký tự tại vị trí (chuoi.length() - i - 1) hay không
             if (chuoi.charAt(i) == kyTu) {
                 System.out.println("Chuỗi này là chuỗi Panlyndrome.");
                 break;

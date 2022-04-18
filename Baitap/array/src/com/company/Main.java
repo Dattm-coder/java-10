@@ -15,7 +15,8 @@ public class Main {
         while(tg.hasMoreTokens()){
             char arr[]= tg.nextToken().toCharArray();
             arr[0]= Character.toUpperCase(arr[0]);
-            for(int i=1;i<arr.length;i++) arr[i]= Character.toLowerCase(arr[i]);
+            for(int i=1;i<arr.length;i++)
+                arr[i]= Character.toLowerCase(arr[i]);
             kq.append(arr); kq.append(" ");
         }
 

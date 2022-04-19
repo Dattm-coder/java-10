@@ -1,8 +1,5 @@
 package model;
 // Viết chương trình quản lý sách với các thông tin sau: id, title, description, author, category, publishingYear
-// Thực hiện các công việc: thêm sách mới, in sách ra màn hình.
-
-import java.util.Scanner;
 
 public class Book {
     public int id, publishingYear;

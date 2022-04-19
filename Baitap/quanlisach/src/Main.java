@@ -5,23 +5,25 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void controller(){
+    public static void controller() {
+        System.out.println("========================================");
         System.out.println("1. Tìm sách theo tên.");
         System.out.println("2. Tìm sách theo thể loại.");
         System.out.println("3. Tìm sách xuất bản trong năm nay.");
-        System.out.println("4. Thoát");
+        System.out.println("0. Thoát");
+        System.out.println("========================================");
     }
 
     public static void main(String[] args) {
         boolean check = true;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập số sách muốn thêm: ");
-        int n =  Integer.parseInt(sc.nextLine());
+        System.out.println("Nhập số lượng sách: ");
+        int n = Integer.parseInt(sc.nextLine());
         Book arrBook[] = new Book[n];
         BookService service = new BookService();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Sách số " + (i+1) + " ");
+            System.out.println("Sách số " + (i + 1) + " ");
             arrBook[i] = service.inputBook();
         }
 
@@ -29,8 +31,8 @@ public class Main {
 
         do {
             controller();
-            int option = Integer.parseInt(sc.nextLine());
-            switch (option) {
+            int choose = Integer.parseInt(sc.nextLine());
+            switch (choose) {
                 case 1:
                     System.out.println("Nhập tên sách muốn tìm: ");
                     String title = sc.nextLine();
@@ -44,19 +46,19 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Sách xuất bản trong năm nay:");
+                    System.out.println("Sách xuất bản trong năm nay là:");
                     service.findByCurrentYear(arrBook);
                     break;
 
-                case 4:
+                case 0:
                     System.exit(0);
                     break;
 
                 default:
-                    System.out.println("Chọn yêu cầu từ 1-3");
+                    System.out.println("Không có yêu cầu nào được chọn");
                     break;
             }
-        } while (check) ;
+        } while (check);
 
     }
 }

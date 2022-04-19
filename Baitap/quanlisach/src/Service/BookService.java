@@ -10,7 +10,7 @@ public class BookService {
     public Book inputBook(){
         Scanner sc = new Scanner(System.in);
         Book book = new Book();
-        System.out.println("Nhập id sách: ");
+        System.out.println("Nhập mã sách: ");
         book.id = Integer.parseInt(sc.nextLine());
         System.out.println("Nhập tên sách: ");
         book.title = sc.nextLine();

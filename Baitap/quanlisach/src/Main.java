@@ -1,46 +1,62 @@
-import model.Sach;
+import Service.BookService;
+import model.Book;
+
+import java.util.Scanner;
 
 public class Main {
 
+    public static void controller(){
+        System.out.println("1. Tìm sách theo tên.");
+        System.out.println("2. Tìm sách theo thể loại.");
+        System.out.println("3. Tìm sách xuất bản trong năm nay.");
+        System.out.println("4. Thoát");
+    }
+
     public static void main(String[] args) {
-        Sach[] arrSach = new Sach[10];
-        arrSach[0] = new Sach(101,"Đắc nhân tâm","tác giả 1","Kiến thức","Kim Đồng",2019);
-        arrSach[1] = new Sach(102,"Đắc nhân","tác giả 2","Kiến thức","Kim Đồng",2019);
-        arrSach[2] = new Sach(103,"Nhân tâm","tác giả 3","Kiến thức","Kim Đồng",2019);
-        arrSach[3] = new Sach(104,"7 thói quen của người thành đạt","tác giả 4","Kiến thức","Kim Đồng",2019);
-        arrSach[4] = new Sach(105,"8 thói quen của người thành đạt","tác giả 5","Kiến thức","Giáo dục",2019);
-        arrSach[5] = new Sach(106,"Hành trình về Phương Đông","tác giả 6","Sách giáo khoa","Giáo dục",2022);
-        arrSach[6] = new Sach(107,"Người giàu có nhất thành Babylon","tác giả 7","Sách giáo khoa","Giáo dục",2019);
-        arrSach[7] = new Sach(108,"Hạt giống tâm hồn","tác giả 8","Sách giáo khoa","Giáo dục",2019);
-        arrSach[8] = new Sach(109,"Tốc độ của niềm tin","tác giả 9","Sách giáo khoa","Giáo dục",2019);
-        arrSach[9] = new Sach(110,"Thói quen thứ 8","tác giả 10","Sách giáo khoa","Giáo dục",2022);
-//        for(Sach sach: s){
-//            System.out.println(s);
-//        }
-        System.out.println("Các loại tên sách:");
-        for(int i=0; i< arrSach.length;i++){
-            System.out.println(arrSach);
+        boolean check = true;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập số sách muốn thêm: ");
+        int n =  Integer.parseInt(sc.nextLine());
+        Book arrBook[] = new Book[n];
+        BookService service = new BookService();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Sách số " + (i+1) + " ");
+            arrBook[i] = service.inputBook();
         }
-        System.out.println("========================================");
-        System.out.println("Sách có cùng tên:");
-        for(Sach sach : arrSach){
-            if(sach.tenSach.equalsIgnoreCase("Đắc nhân")){
-                System.out.println(arrSach);
+
+        service.showBook(arrBook);
+
+        do {
+            controller();
+            int option = Integer.parseInt(sc.nextLine());
+            switch (option) {
+                case 1:
+                    System.out.println("Nhập tên sách muốn tìm: ");
+                    String title = sc.nextLine();
+                    service.findByTitle(arrBook, title);
+                    break;
+
+                case 2:
+                    System.out.println("Nhập thể loại sách muốn tìm: ");
+                    String cate = sc.nextLine();
+                    service.findByCate(arrBook, cate);
+                    break;
+
+                case 3:
+                    System.out.println("Sách xuất bản trong năm nay:");
+                    service.findByCurrentYear(arrBook);
+                    break;
+
+                case 4:
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Chọn yêu cầu từ 1-3");
+                    break;
             }
-        }
-        System.out.println("========================================");
-        System.out.println("Sách có cùng thể loại:");
-        for(Sach sach : arrSach){
-            if(sach.theLoai.equalsIgnoreCase("Sách giáo khoa")){
-                System.out.println(arrSach);
-            }
-        }
-        System.out.println("========================================");
-        System.out.println("Sách xuất bản trong năm là:");
-        for(Sach sach : arrSach){
-            if(sach.theLoai.equalsIgnoreCase("Sách giáo khoa")){
-                System.out.println(arrSach);
-            }
-        }
+        } while (check) ;
+
     }
 }

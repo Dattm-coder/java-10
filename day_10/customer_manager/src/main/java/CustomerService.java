@@ -47,6 +47,9 @@ public class CustomerService {
             System.out.println("không tìm thấy file");
         }
 
+//        for(Customer c : list){
+//            System.out.println(c.getId() + " - " + c.getFirstName() + " - " + c.getLastName());
+//        }
         for(Customer c : list){
             System.out.println(c.getId() + " - " + c.getFirstName() + " - " + c.getLastName());
         }

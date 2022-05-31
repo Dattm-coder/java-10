@@ -39,7 +39,7 @@ INNER JOIN title_type b
 ON a.id_title_type = b.id 
 WHERE b.name = 'Movie'
 ORDER BY a.imdb DESC 
--- 6.1.Liệt kê tiêu đề, mô tả, poster, độ dài, thể loại (bảng genres - trả về dữ liệu dạng array), số tập và số tập đã công chiếu, của các phim thuộc loại TV mini Series, sắp xếp theo ngày công chiếu mới nhất
+-- 6.Liệt kê tiêu đề, mô tả, poster, độ dài, thể loại (bảng genres - trả về dữ liệu dạng array), số tập và số tập đã công chiếu, của các phim thuộc loại TV mini Series, sắp xếp theo ngày công chiếu mới nhất
 SELECT a.title, a.description AS Description , a.release_date , a.poster AS Poster , a.`length` , 
 	   JSON_ARRAYAGG(d.name) AS Genres , a.episode , a.current_episode 
 FROM movie a INNER JOIN movie_genres b 

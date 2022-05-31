@@ -1,6 +1,6 @@
 -- THI KẾT THÚC DATABASE
 -- 1.Lấy thông tin các bộ phim gồm: tiêu đề, mô tả, tên đạo diễn, tên biên kịch (bảng writers - trả về dạng array), độ dài, rating, của các bộ phim thuộc loại ‘Movie’.
-SELECT a.title AS title , a.description AS description , d.full_name AS author ,
+SELECT a.title , a.description AS description , d.full_name AS author ,
 	   JSON_ARRAYAGG(c.full_name) AS writer , a.`length` AS length , a.rating 
 FROM movie a INNER JOIN movie_writers b  
 ON a.id = b.id_movie  
